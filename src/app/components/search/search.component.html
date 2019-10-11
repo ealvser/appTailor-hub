@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Search Location...">
+    </div>
+  </div>
+
+  <div class="card-columns mt-5">
+    <div *ngFor="let country of countries" class="card">
+      <a [href]="country.company_url"><img [src]=country.company_logo class="card-img-top" [alt]="country.company"></a>
+      <div class="card-body">
+        <h5 class="card-title">{{country.title}}</h5>
+        <p class="card-text" class="text-uppercase">{{country.company}}</p>
+        <p class="card-text">{{country.location}}</p>
+        <p class="card-text">{{country.type}}</p>
+      </div>
+      <a [href]="country.url" class="btn btn-outline-secondary btn-sm btn-block">View Details...</a>
+    </div>
+  </div>
+</div>

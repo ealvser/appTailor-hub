@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="card-columns mt-5">
+    <div *ngFor="let job of newjobs" class="card">
+      <a [href]="job.company_url"><img [src]='job.company_logo' class="card-img-top" [alt]="job.company"></a>
+      <div class="card-body">
+        <h5 class="card-title">{{job.title}}</h5>
+        <p class="card-text" class="text-uppercase">{{job.company}}</p>
+        <p class="card-text">{{job.location}}</p>
+        <p class="card-text">{{job.type}}</p>
+      </div>
+      <a [href]="job.url" class="btn btn-outline-secondary btn-sm btn-block">View Details...</a>
+    </div>
+  </div>
+</div>
